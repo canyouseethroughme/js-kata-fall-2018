@@ -57,3 +57,7 @@ article img {
 #modal_container.hidden{
   top: -100vh;
 }
+
+#closebutton {
+  cursor: pointer;
+}
