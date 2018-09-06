@@ -1,11 +1,41 @@
 "use strict";
 
-function displayElement( element ) {
-    console.log( element.textContent );
+function listMethods(id) {
+    let lis = document.querySelectorAll("#" + id + " li");
+    lis.forEach(li => {
+        displayElement(li);
+    });
 }
 
-listMethods("modify");
+function listMethodsFor(id) {
+    const lis = document.querySelectorAll("#" + id + " li");
+    for (let i = 0; i < lis.length; i++) {
+        displayElement(lis[i]);
+    }
+}
+
+
+
+
+function displayElement(element) {
+    console.log(element.textContent);
+}
+
 listMethods("info");
-listMethods("newarray");
+console.log("+++");
+listMethods("modify");
+
+console.log("+++");
+listMethods("newArray");
+
+console.log("=======");
+listMethodsFor("info");
+console.log("+++");
+listMethodsFor("modify");
+console.log("+++");
+listMethodsFor("newArray");
+
+
+
 
 // TODO: Create listMethods function
